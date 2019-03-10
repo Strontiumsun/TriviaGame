@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -32,17 +35,25 @@
     <!--Here's a question with a correct answer-->
     <!--Now that I can make the buttons in HTML, I have to see if I can make them in JS too-->
     <!-- </form> -->
-    <div id="start-container">
-        <button id="start-button">Start!</button>
+    <div id="header-container" class="container">
+        <header id="custom-header" class="rounded">
+            <h1>Pokemon Trivia Game!</h1>
+        </header>
     </div>
-    <div id="question-container">
-        <div id="countdown-here"> <span id="countdown"></span></div>
-        <div id="put-luis-here"></div>
-        <div id="check-button"></div>
+    <div class="container" id="big-container">
+        <div id="start-container" class="container">
+            <button id="start-button" class="btn btn-info">Start!</button>
+        </div>
+        <div id="find-questions">
+            <div id="countdown-here"> <span id="countdown"></span></div>
+            <div id="put-luis-here"></div>
+            <div id="check-button"></div>
+        </div>
+        <div id="results-container">
+            <div id="results"></div>
+        </div>
     </div>
-    <div id="results-container">
-        <div id="results"></div>
-    </div>
+
 
     <!-- here goes the JQuery-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
