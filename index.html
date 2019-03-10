@@ -9,78 +9,45 @@
 </head>
 
 <body>
-    <form>
-        <div>Favorite type of Pizza?</div>
+    <!-- <form> -->
+    <!-- <div>Favorite type of Pizza?</div>
         <input type="radio" name="pizza" value="Cheese">Cheese<br>
         <input type="radio" name="pizza" value="Pepperoni">Pepperoni<br>
         <input type="radio" name="pizza" value="Sausage">Sausage<br>
-        <input type="radio" name="pizza" value="Veggie">Veggie<br>
-        <!-- it seems that giving the buttons the same "name" value will prevent you from choosing more than one at a time. -->
-        <br>
+        <input type="radio" name="pizza" value="Veggie">Veggie<br> -->
+    <!-- it seems that giving the buttons the same "name" value will prevent you from choosing more than one at a time. -->
+    <!-- <br>
         <div>Favorite type of Soda?</div>
         <input type="radio" name="soda" value="Coke">Coke<br>
         <input type="radio" name="soda" value="Sprite">Sprite<br>
         <input type="radio" name="soda" value="Fanta">Fanta<br>
-        <input type="radio" name="soda" value="Dr. Pepper">Dr. Pepper<br>
-        <!--you can store multiple radio buttons in the same form without cross-contamination-->
-        <br>
+        <input type="radio" name="soda" value="Dr. Pepper">Dr. Pepper<br> -->
+    <!--you can store multiple radio buttons in the same form without cross-contamination-->
+    <!-- <br>
         <div>Which weapon has the longest range?</div>
         <input type="radio" name="splat" value="Charger">Splat Charger<br>
         <input type="radio" name="splat" value="Jet">Jet Squelcher<br>
         <input type="radio" name="splat" value="Scope">Splatterscope<br>
-        <input type="radio" name="splat" value="E">E-Liter 4k<br>
-        <!--Here's a question with a correct answer-->
-        <!--Now that I can make the buttons in HTML, I have to see if I can make them in JS too-->
-    </form>
-    <br>
-    <!-- <div id="generate"></div> -->
-    <div>Which of these dogs do I love the most?</div>
-    <form id="generate"></form>
-    <!-- here goes the JQuery. I'm testing this out inside the document-->
+        <input type="radio" name="splat" value="E">E-Liter 4k<br> -->
+    <!--Here's a question with a correct answer-->
+    <!--Now that I can make the buttons in HTML, I have to see if I can make them in JS too-->
+    <!-- </form> -->
+    <div id="start-container">
+        <button id="start-button">Start!</button>
+    </div>
+    <div id="question-container">
+        <div id="countdown-here"> <span id="countdown"></span></div>
+        <div id="put-luis-here"></div>
+        <div id="check-button"></div>
+    </div>
+    <div id="results-container">
+        <div id="results"></div>
+    </div>
+
+    <!-- here goes the JQuery-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-        // with this small script, I can create a single radio button
-
-        function generateAButton() {
-            var genQuestion = $("<form>");
-            var genInput = $("<input>")
-
-            genInput.attr("type", "radio");
-
-            genInput.attr("name", "test");
-
-            genInput.attr("value", "1");
-
-            genQuestion.append(genInput, "Test");
-
-            $("#generate").append(genQuestion);
-        }
-
-        // but what if I want to generate multiple buttons? Here I think we need to create an array
-
-        var dogsILove = ["Payton", "Westie", "Lucy", "Baxter"];
-
-        // this function creates four buttons with the name of the dogs and with the value of the dogs
-        // unlike in the HTML, these buttons displayed horizontally, which is what I want, but I doubt it's consistent
-        function dogRadio(arr) {
-            var genQuestion = $("<form>");
-            for (var i = 0; i < arr.length; i++) {
-                var genInput = $("<input>");
-                genInput.attr("type", "radio");
-                genInput.attr("name", "dog");
-                genInput.attr("value", arr[i]);
-
-                genQuestion.append(genInput, arr[i]);
-            }
-            $("#generate").append(genQuestion);
-        }
-        dogRadio(dogsILove);
-
-        // I will have to ask how to generate the question.
-
-    </script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
 
